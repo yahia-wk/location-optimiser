@@ -11,7 +11,7 @@ sdk = TravelTimeSdk(app_id=os.getenv("TIME_APP_ID"), api_key=os.getenv("TIME_API
 
 
 async def main():
-    default_offices = ["Sloane Square, London", "Holborn, London", "Liverpool Street, London"]
+    default_offices = ["Sloane Square, London", "Holborn, London", "Regents place, London"]
     default_home = "Goldsmid House, London"
 
     # get office locations from user input or use default

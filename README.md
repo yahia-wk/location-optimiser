@@ -76,7 +76,7 @@ If you select the default option, the following locations are used:
 - **Offices**:
   - Sloane Square, London
   - Holborn, London
-  - Liverpool Street, London
+  - Regents place, London
 
 - **Home**:
   - Goldsmid House, London
