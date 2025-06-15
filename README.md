@@ -78,8 +78,6 @@ If you select the default option, the following locations are used:
   - Holborn, London
   - Regents place, London
 
-- **Home**:
-  - Goldsmid House, London
 
 ---
 

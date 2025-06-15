@@ -12,18 +12,21 @@ sdk = TravelTimeSdk(app_id=os.getenv("TIME_APP_ID"), api_key=os.getenv("TIME_API
 
 async def main():
     default_offices = ["Sloane Square, London", "Holborn, London", "Regents place, London"]
-    default_home = "Goldsmid House, London"
+    
 
     # get office locations from user input or use default
     use_default = input("Do you want to use default office and home locations? (yes/no): ").strip().lower()
     if use_default == 'yes':
         office_locations = default_offices
-        home_location = default_home
     elif use_default == 'no':
         office_locations = []
-        home_location = ""
     else:
         print("Invalid input. Exiting.")
+        return
+    
+    home_location = input("Enter your home location: ").strip()
+    if not home_location:
+        print("No home location provided. Exiting.")
         return
     
     # if user chose not to use default, get office locations from user input
@@ -38,12 +41,6 @@ async def main():
 
         if not office_locations:
             print("No office locations provided. Exiting.")
-            return
-        
-        # get home location from user input
-        home_location = input("Enter your home location: ")
-        if not home_location:
-            print("No home location provided. Exiting.")
             return
     
     # Geocode office locations
